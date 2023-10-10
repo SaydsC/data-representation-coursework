@@ -1,0 +1,32 @@
+#Assignment 1.1 Create an XML
+
+<Library>
+	<Technical_Books>
+		<Book>
+			<ISBN-10>1798596245</ISBN-10>
+			<ISBN-13>978-1798596241</ISBN-13>
+			<title>Technical Analysis of Stock Trends: Investment Series</title>
+			<author>Peter Oliver</author>
+		</Book>
+		<Book>
+			<isbn-10>1398606057</isbn-10>
+			<isbn-13>978-1398606050</isbn-13>
+			<title>Data and Analytics Strategy for Business</title>
+			<author>Simon Asplen-Taylor</author>
+		</Book>
+	</Technical_Books>
+	<Cook_Books>
+		<Book>
+			<ISBN-10>178594763X</ISBN-10>
+			<ISBN-13>978-1785947636</ISBN-13>
+			<title>Mary Berry's Baking Bible</title>
+			<author>Mary Berry</author>
+		</Book>
+		<Book>
+			<ISBN-10>1444780786</ISBN-10>
+			<ISBN-13>978-1444780789</ISBN-13>
+			<title>Gordon Ramsay's Ultimate Home Cooking</title>
+			<author>Gordon Ramsay</author>
+		</Book>	
+	</Cook_Books>
+</Library>
