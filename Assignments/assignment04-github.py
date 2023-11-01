@@ -7,8 +7,33 @@
 
 from github import Github
 import requests
-from config import config as cfg
 
-apikey = cfg["githubkey"]
+from config import config as cfg #import key from hidden file
 
-g = Github(apikey)
+
+file_path = 'https://api.github.com/repos/SaydsC/dataRepresentationPrivate'
+github_user = 'SaydsC'
+github_repo = 'dataRepresentationPrivate'
+
+github_token = cfg["githubkey"]
+g = Github(github_token)
+
+#Specifying private Github repo
+repo = g.get_repo("SaydsC/dataRepresentationPrivate")
+
+#Checking repo for required file and getting it's URL
+namefile = repo.get_contents("namechange.txt")
+nameURL = namefile.download_url
+
+#File content is retrieved 
+response = requests.get(nameURL)
+contentofthefile = response.text
+
+#Replacing the 5 instances of the name Andrew with the name Sadie
+updatednamefile = contentofthefile.replace("Andrew","Sadie")
+
+#Updated text file is pushed to Github
+githubpush=repo.update_file(namefile.path,"updated by prog",
+updatednamefile,namefile.sha)
+
+print ("Name replaced succesfully")
