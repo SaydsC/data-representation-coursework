@@ -1,6 +1,14 @@
 # Assignment 04
 
 #Write a program in python that will read a file from a repository, 
-# The program should then replace all the instances of the text "Andrew" with your name
+#The program should then replace all the instances of the text "Andrew" with your name
 #The program should then commit those changes and push the file back to the repository.
-# I do not need to see your keys (see lab2, to follow)
+#I do not need to see your keys (see lab2, to follow)
+
+from github import Github
+import requests
+from config import config as cfg
+
+apikey = cfg["htmltopdfkey"]
+
+g = Github(apikey)
