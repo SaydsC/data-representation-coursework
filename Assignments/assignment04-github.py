@@ -9,6 +9,6 @@ from github import Github
 import requests
 from config import config as cfg
 
-apikey = cfg["htmltopdfkey"]
+apikey = cfg["githubkey"]
 
 g = Github(apikey)
