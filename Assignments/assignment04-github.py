@@ -18,7 +18,7 @@ github_repo = 'dataRepresentationPrivate'
 github_token = cfg["githubkey"]
 g = Github(github_token)
 
-#Specifying private Github repo
+#Specifying private Github repository
 repo = g.get_repo("SaydsC/dataRepresentationPrivate")
 
 #Checking repo for required file and getting it's URL
@@ -36,4 +36,4 @@ updatednamefile = contentofthefile.replace("Andrew","Sadie")
 githubpush=repo.update_file(namefile.path,"updated by prog",
 updatednamefile,namefile.sha)
 
-print ("Name replaced succesfully")
+print ("Name replaced successfully")
